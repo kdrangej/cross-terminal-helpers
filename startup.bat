@@ -1,3 +1,5 @@
+@echo off
+
 doskey clear=cls
 doskey ls=dir $* /ON
 doskey ll=dir $* /ON
@@ -12,3 +14,11 @@ doskey nano=ed
 doskey pico=ed
 doskey alias=doskey /macros
 doskey cscwin=csc /target:winexe $*
+
+PATH %PATH%;%SYSTEMROOT%\Microsoft.NET\Framework64\v4.0.30319
+
+
+title %~n0
+prompt $p$_$g 
+:last
+cmd /k
